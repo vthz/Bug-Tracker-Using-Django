@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends "baseTemplate.html" %}
+{%block title%}Add New Project{%endblock%}
+{%block nowActive%}Add New Project{%endblock%}
+{%block main_body%}
+<form method="POST" class="post-form" action="add_new_project"/>
+    {% csrf_token %}
+    <div>
+        <h3>Enter Details</h3>
+
+
+        <div>
+            <div>Project Name:</div>
+            <div>{{form.project_name}}</div>
+            <br>
+        </div>
+
+        <div>
+            <div>Project Description:</div>
+            <div>{{form.project_desc}}</div>
+            <br>
+        </div>
+
+        <div>
+            <div>Project Team:</div>
+            <div>{{form.project_team}}</div>
+            <br>
+        </div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{%endblock%}

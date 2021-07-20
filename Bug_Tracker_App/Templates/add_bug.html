@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%extends "baseTemplate.html" %}
+{%block title%}Add New Bug{%endblock%}
+{%block nowActive%}Add New Bug{%endblock%}
+
+{%block main_body%}
+<form method="POST" class="post-form" action="/add_new_bug/{{id}}"/>
+    {% csrf_token %}
+    <div>
+        <h3>Enter Bug Details</h3>
+
+
+        <div>
+            <div>Project ID:{{id}}</div>
+            <div>{{form.project_id}}</div>
+            <br>
+        </div>
+
+        <div>
+            <div>Bug Description:</div>
+            <div>{{form.bug_desc}}</div>
+            <br>
+        </div>
+
+        <div>
+            <div>Bug Status:</div>
+            <div>{{form.bug_status}}</div>
+            <br>
+        </div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{%endblock%}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%extends "baseTemplate.html" %}
+{%block title%}Bug Details{%endblock%}
+{%block nowActive%} Bug Details {%endblock%}
+{%block main_body%}
+
+<table>
+    <thead>
+    <tr>
+        <th>Bug ID</th>
+        <th>Project ID</th>
+        <th>Bug Description</th>
+        <th>Bug Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{req_id}}
+    {% for i in bugs %}
+    <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.project_id}}</td>
+            <td>{{i.bug_desc}}</td>
+            <td>{{i.bug_status}}</td>
+            <td>
+                <a style="color:#eb3434" href="/delete_bug/{{i.id}}">Delete</a>
+            </td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{%endblock%}

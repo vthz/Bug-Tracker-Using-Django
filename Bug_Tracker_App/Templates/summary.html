@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%extends "baseTemplate.html" %}
+{%block title%}Summary{%endblock%}
+{%block nowActive%} Summary {%endblock%}
+{%block main_body%}
+<table>
+    <thead>
+    <tr>
+        <th>Project ID:</th>
+        <th>Project Name</th>
+        <th>Project Description</th>
+        <th>Project Team</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in form%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.project_name}}</td>
+        <td>{{i.project_desc}}</td>
+        <td>{{i.project_team}}</td>
+        <td>
+            <a style="color:#eb8f34" href="/edit/{{i.id}}">Edit</a>
+            <a style="color:#eb3434" href="/delete/{{i.id}}">Delete</a>
+            <a style="color:#457526" href="/add_new_bug/{{i.id}}">Add Bug</a>
+            <a style="color:#3486eb" href="/see_project_bug/{{i.id}}">See Bug</a>
+        </td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{%endblock%}

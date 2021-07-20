@@ -1,0 +1,31 @@
+{%extends "baseTemplate.html" %}
+{%block title%}Add New Project{%endblock%}
+{%block nowActive%}Add New Project{%endblock%}
+{%block main_body%}
+<form method="POST" class="post-form" action="/update/{{form.id}}"/>
+{% csrf_token %}
+<div>
+    <h3>Edit Details(Project {{form.id}})</h3>
+    <div>
+        <div>Project Name:</div>
+        <input type="text" name="project_name" id="id_eid" value="{{form.project_name}}"/>
+        <br>
+    </div>
+
+    <div>
+        <div>Project Description:</div>
+        <input type="text" name="project_desc" id="id_ename" value="{{form.project_desc}}"/>
+        <br>
+    </div>
+
+    <div>
+        <div>Project Team:</div>
+            <input type="text" name="project_team" id="id_eemail" value="{{form.project_team}}"/>
+        <br>
+    </div>
+
+    <button type="submit">Update</button>
+</div>
+</form>
+
+{%endblock%}

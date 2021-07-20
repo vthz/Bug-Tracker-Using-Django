@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="static/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <center><h1 class="body_text">Bug Tracker</h1></center>
+</head>
+<div class="nav_bar">
+    <a href="/">Home</a>
+    <a href="/add_new_project">Add New Project</a>
+    <a href="/summary">Summary</a>
+</div>
+<div class="body_text"><h3>{%block nowActive%}{%endblock%}</h3></div>
+<body>
+{%block main_body%}{%endblock%}
+</body>
+<center>
+    <footer>Bug Tracker v1.0</footer>
+</center>
+</html>
