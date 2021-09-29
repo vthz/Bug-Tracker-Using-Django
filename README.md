@@ -7,4 +7,4 @@ Features<br>
 4. Edit/Update Projects.
 5. See count of currently active Projects and Bugs.
 
-NOTE: I was focused on functionality this time. Hopefully, I will imporove other aspects as well in future.
+NOTE: I was focused on functionality this time. Hopefully, I will improve other aspects as well...in future.
